@@ -10,8 +10,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script type="text/javascript" src="/js/angular/angular.js"></script>
 
+    <script type="text/javascript" src="/js/modues/base.js"></script>
 </head>
 <body>
-
+<div class="fixed-header" ng-controller="headerCtrl">
+    <a href="" ng-click="gotoAnchor(x)" ng-repeat="x in [1,2,3,4,5]">
+        Go to anchor {{x}}
+    </a>
+</div>
+<div id="anchor{{x}}" class="anchor" ng-repeat="x in [1,2,3,4,5]">
+    Anchor {{x}} of 5
+</div>
 </body>
 </html>
